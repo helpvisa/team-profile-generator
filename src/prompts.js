@@ -177,3 +177,5 @@ const internPrompt = [
         }
     }
 ];
+
+module.exports = { managerPrompt, addMemberPrompt, engineerPrompt, internPrompt};
