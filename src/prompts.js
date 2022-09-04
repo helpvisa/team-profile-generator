@@ -5,7 +5,7 @@
 const managerPrompt = [
     {
         type: "input",
-        name: "managerName",
+        name: "name",
         message: "Hello manager! What is your name? ",
         validate: nameInput => {
             if (nameInput) {
@@ -18,7 +18,7 @@ const managerPrompt = [
     },
     {
         type: "input",
-        name: "managerId",
+        name: "id",
         message: "Please input your employee ID: ",
         validate: idInput => {
             if (idInput) {
@@ -31,7 +31,7 @@ const managerPrompt = [
     },
     {
         type: "input",
-        name: "managerEmail",
+        name: "email",
         message: "Please enter your email address: ",
         validate: emailInput => {
             if (emailInput) {
@@ -44,7 +44,7 @@ const managerPrompt = [
     },
     {
         type: "input",
-        name: "managerOffice",
+        name: "office",
         message: "Please enter your office number: ",
         validate: officeInput => {
             if (officeInput) {

@@ -1,5 +1,5 @@
 // functions that wrap prompts
-const inquire = require("./src/inquirer_functions");
+const inquire_functions = require("./src/inquirer_functions");
 
 //------//
 // init //
