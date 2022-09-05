@@ -1,5 +1,5 @@
 // grab from classes.js
-const {Manager} = require("../src/classes");
+const {Manager} = require("../lib/classes");
 
 // write tests
 describe("manager class functionality", () => {

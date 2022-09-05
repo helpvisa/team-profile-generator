@@ -3,7 +3,7 @@ const inquirer = require("inquirer");
 // prompts for inquirer
 const prompts = require("./prompts");
 // employee classes
-const {Manager, Engineer, Intern} = require("./classes");
+const {Manager, Engineer, Intern} = require("../lib/classes");
 
 //-----------------//
 // prompt wrappers //

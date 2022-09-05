@@ -1,5 +1,5 @@
 // grab from classes.js
-const {Engineer} = require("../src/classes");
+const {Engineer} = require("../lib/classes");
 
 // write tests
 describe("engineer class functionality", () => {

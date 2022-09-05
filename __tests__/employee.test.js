@@ -1,5 +1,5 @@
 // grab from classes.js
-const {Employee} = require("../src/classes");
+const {Employee} = require("../lib/classes");
 
 // write tests
 describe("employee class functionality", () => {

@@ -1,7 +1,7 @@
 // grab from prompts.js
 const {managerFunc, engineerFunc, internFunc} = require("../src/inquirer_functions");
 // grab from classes.js
-const {Manager, Engineer, Intern} = require("../src/classes");
+const {Manager, Engineer, Intern} = require("../lib/classes");
 // for mocking
 const inquirer = require("inquirer");
 

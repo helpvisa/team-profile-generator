@@ -3,7 +3,7 @@
 //----------------//
 
 // require classes for picking icons / building template
-const {Manager, Engineer, Intern} = require("./classes");
+const {Manager, Engineer, Intern} = require("../lib/classes");
 
 // function that builds template
 function htmlBuilder(data) {

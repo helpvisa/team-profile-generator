@@ -1,5 +1,5 @@
 // grab from classes.js
-const {Intern} = require("../src/classes");
+const {Intern} = require("../lib/classes");
 
 // write tests
 describe("intern class functionality", () => {
