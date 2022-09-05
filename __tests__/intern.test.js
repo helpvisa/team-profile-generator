@@ -13,31 +13,31 @@ describe("intern class functionality", () => {
         expect(intern.school).toEqual(expect.any(String));
     });
 
-    it("creates an Intern named Steve", () => {
+    it("returns correct intern name", () => {
         // create
         const intern = new Intern("Steve", "678", "intern@new.com", "University of Toronto");
 
-        expect(intern.name).toBe("Steve");
+        expect(intern.getName()).toBe("Steve");
     });
 
-    it("creates an Intern with employee id of '678'", () => {
+    it("returns correct intern employee id", () => {
         // create
         const intern = new Intern("Derek", "678", "intern@new.com", "University of Toronto");
 
-        expect(intern.id).toBe("678");
+        expect(intern.getId()).toBe("678");
     });
 
-    it("creates an Intern with email of 'intern@new.com'", () => {
+    it("returns correct intern email", () => {
         // create
         const intern = new Intern("Derek", "678", "intern@new.com", "University of Toronto");
 
-        expect(intern.email).toBe("intern@new.com");
+        expect(intern.getEmail()).toBe("intern@new.com");
     });
 
-    it("creates an Intern with github username of 'University of Toronto'", () => {
+    it("returns correct intern school", () => {
         // create
         const intern = new Intern("Derek", "678", "intern@new.com", "University of Toronto");
 
-        expect(intern.school).toBe("University of Toronto");
+        expect(intern.getSchool()).toBe("University of Toronto");
     });
 });

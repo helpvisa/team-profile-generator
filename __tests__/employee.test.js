@@ -12,24 +12,24 @@ describe("employee class functionality", () => {
         expect(emp.email).toEqual(expect.any(String));
     });
 
-    it("creates an employee named John", () => {
+    it("returns correct employee name", () => {
         // create
         const emp = new Employee("John", "555", "john@john.net");
 
-        expect(emp.name).toBe("John");
+        expect(emp.getName()).toBe("John");
     });
 
-    it("creates an employee with id of '555'", () => {
+    it("returns correct employee id", () => {
         // create
         const emp = new Employee("John", "555", "john@john.net");
 
-        expect(emp.id).toBe("555");
+        expect(emp.getId()).toBe("555");
     });
 
-    it("creates an employee with email of 'john@john.com'", () => {
+    it("returns correct employee email", () => {
         // create
         const emp = new Employee("John", "555", "john@john.net");
 
-        expect(emp.email).toBe("john@john.net");
+        expect(emp.getEmail()).toBe("john@john.net");
     });
 });

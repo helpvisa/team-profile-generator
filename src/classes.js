@@ -8,6 +8,23 @@ class Employee {
         this.id = id;
         this.email = email;
     }
+
+    // methods
+    getName() {
+        return this.name;
+    }
+
+    getId() {
+        return this.id;
+    }
+
+    getEmail() {
+        return this.email;
+    }
+
+    getRole() {
+        return "Employee";
+    }
 }
 
 // manager class
@@ -16,6 +33,16 @@ class Manager extends Employee {
         // init original Employee constructor
         super(name, id, email);
         this.office = office;
+    }
+
+    // methods
+    // override role
+    getRole() {
+        return "Manager";
+    }
+
+    getOfficeNumber() {
+        return this.office;
     }
 }
 
@@ -28,9 +55,14 @@ class Engineer extends Employee {
     }
 
     // methods
+    // override role
+    getRole() {
+        return "Engineer";
+    }
+
     // constructs and returns github url
     getGit() {
-        return `https://github.com/${this.name}`;
+        return `https://github.com/${this.github}`;
     }
 }
 
@@ -40,6 +72,16 @@ class Intern extends Employee {
         // init original Employee constructor
         super(name, id, email);
         this.school = school;
+    }
+
+    //methods
+    // override role
+    getRole() {
+        return "Intern";
+    }
+
+    getSchool() {
+        return this.school;
     }
 }
 

@@ -13,31 +13,31 @@ describe("engineer class functionality", () => {
         expect(eng.github).toEqual(expect.any(String));
     });
 
-    it("creates an engineer named Steve", () => {
+    it("returns correct engineer name", () => {
         // create
         const eng = new Engineer("Steve", "789", "eeng@eng.com", "helpvisa");
 
-        expect(eng.name).toBe("Steve");
+        expect(eng.getName()).toBe("Steve");
     });
 
-    it("creates an engineer with employee id of '789'", () => {
+    it("returns correct engineer id", () => {
         // create
         const eng = new Engineer("Derek", "789", "eeng@eng.com", "helpvisa");
 
-        expect(eng.id).toBe("789");
+        expect(eng.getId()).toBe("789");
     });
 
-    it("creates an engineer with email of 'eeng@eng.com'", () => {
+    it("returns correct engineer email", () => {
         // create
         const eng = new Engineer("Derek", "789", "eeng@eng.com", "helpvisa");
 
-        expect(eng.email).toBe("eeng@eng.com");
+        expect(eng.getEmail()).toBe("eeng@eng.com");
     });
 
-    it("creates an engineer with github username of 'helpvisa'", () => {
+    it("returns correct engineer github username", () => {
         // create
         const eng = new Engineer("Derek", "789", "eeng@eng.com", "helpvisa");
 
-        expect(eng.github).toBe("helpvisa");
+        expect(eng.getGit()).toBe("https://github.com/helpvisa");
     });
 });

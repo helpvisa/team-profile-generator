@@ -13,31 +13,31 @@ describe("manager class functionality", () => {
         expect(man.office).toEqual(expect.any(String));
     });
 
-    it("creates a manager named Derek", () => {
+    it("returns correct manager name", () => {
         // create
         const man = new Manager("Derek", "123", "dman@man.com", "456");
 
-        expect(man.name).toBe("Derek");
+        expect(man.getName()).toBe("Derek");
     });
 
-    it("creates a manager with employee id of '123'", () => {
+    it("returns correct manager employee id", () => {
         // create
         const man = new Manager("Derek", "123", "dman@man.com", "456");
 
-        expect(man.id).toBe("123");
+        expect(man.getId()).toBe("123");
     });
 
-    it("creates a manager with email of 'dman@man.com'", () => {
+    it("returns correct manager email", () => {
         // create
         const man = new Manager("Derek", "123", "dman@man.com", "456");
 
-        expect(man.email).toBe("dman@man.com");
+        expect(man.getEmail()).toBe("dman@man.com");
     });
 
-    it("creates a manager with office number of '456'", () => {
+    it("returns correct manager office number", () => {
         // create
         const man = new Manager("Derek", "123", "dman@man.com", "456");
 
-        expect(man.office).toBe("456");
+        expect(man.getOfficeNumber()).toBe("456");
     });
 });
