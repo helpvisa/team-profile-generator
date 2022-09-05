@@ -9,3 +9,5 @@ node_modules/
 
 # generated html files
 *.html
+# keep html in dist directory
+!dist/*.html

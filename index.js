@@ -1,5 +1,9 @@
 // functions that wrap prompts
 const {managerFunc, addMemberFunc, engineerFunc, internFunc} = require("./src/inquirer_functions");
+// html generator
+const gen = require("./src/gen");
+// file writer
+const fs = require("fs");
 
 //------//
 // init //
@@ -12,11 +16,13 @@ main();
 //---------------//
 // uses function to wrap main operation of program, so usage of async/await is possible
 async function main() {
-    // get data about manager
-    const manager = await managerFunc();
-
     // create array of team members
     const team = [];
+
+    // get data about manager
+    const manager = await managerFunc();
+    // add to team
+    team.push(manager);
 
     // prompt user for adding new team member
     let looping = true; // while this is true, we are adding team members
@@ -29,7 +35,7 @@ async function main() {
             team.push(newMember);
         } else if (state.memberType === "Intern") {
             // prompt user for intern details, then add to team
-            const newMember = await (internFunc());
+            const newMember = await internFunc();
             team.push(newMember);
         } else {
             // otherwise, we stop looping; no members selected to add
@@ -37,6 +43,10 @@ async function main() {
         }
     }
 
-    console.log(manager);
-    console.log(team);
+    // print thanks and write file
+    console.log("Thanks for using the Team Builder app! Your file will be ready shortly...");
+    fs.writeFile('./dist/team.html', gen(team), err => {
+        if (err) throw err;
+        console.log("File saved to ./dist/team.html! Open in your browser to check it out!");
+    });
 }
