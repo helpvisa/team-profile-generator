@@ -63,7 +63,7 @@ const addMemberPrompt = [
         type: "list",
         name: "memberType",
         message: "What kind of team member would you like to add? ",
-        choices: ["Engineer", "Intern", "Finalize"]
+        choices: ["Engineer", "Intern", "Finalize Team"]
     }
 ];
 
