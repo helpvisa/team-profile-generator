@@ -27,6 +27,8 @@ This application uses node.js; navigate to the directory containing index.js and
 
 Similar to installation, once npm install has been run and the dependencies acquired, simply type "node index.js" in the same directory and the application will run and prompt you to enter your information!
 
+A demonstration video of how to run the app, as well as any included unit tests, is available on [YouTube](https://www.youtube.com/watch?v=2UEIMz24KMc).
+
 
 ## Images
 
