@@ -3,7 +3,7 @@ const {managerFunc, addMemberFunc, engineerFunc, internFunc} = require("./src/in
 // html generator
 const gen = require("./src/gen");
 // file writer
-const fs = require("fs");
+const fs = require("fs").promises;
 
 //------//
 // init //
@@ -45,8 +45,24 @@ async function main() {
 
     // print thanks and write file
     console.log("Thanks for using the Team Builder app! Your file will be ready shortly...");
-    fs.writeFile('./dist/team.html', gen(team), err => {
-        if (err) throw err;
-        console.log("File saved to ./dist/team.html! Open in your browser to check it out!");
-    });
+
+    // create dist directory if it doesn't already exist (just in case)
+    try {
+        // make a new folder; ignore if it is already there
+        await fs.mkdir("./dist", {recursive: true});
+    } catch(err) {
+        // catch and log error to console
+        console.error(err);
+    }
+
+    // now write file
+    try {
+        await fs.writeFile('./dist/team.html', gen(team));
+    } catch(err) {
+        // catch and log error to console
+        console.error(err);
+    }
+
+    // inform the user the file is done generating
+    console.log("Done! Your file can be opened from ./dist/team.html!");
 }
